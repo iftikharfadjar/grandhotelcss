@@ -1,41 +1,78 @@
 /* common styles */
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+  font-size: 62.5%; /* change font size 10/16 from default (16px) */
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 /* end of common styles */
 
+/* navbar */
+/* sidebar */
+.sidebar {
+  width: 8rem;
+  height: 100%;
+  background-color: #eee;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.menu-icon {
+  /* width: 2rem;
+  height: 2rem;
+  background-color: #222; -*/
+  margin-top: 3rem;
+  cursor: pointer;
+}
 
+.line {
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: 0.6rem;
+}
 
+.line-1,
+.line-3 {
+  width: 1.8rem;
+  transition: width 0.16s;
+}
 
+.menu-icon:hover .line {
+  width: 2.5rem;
+}
 
+.social-icons-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  height: 20rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
+.social-link {
+  font-size: 1.5rem;
+  color: #777;
+  transition: font-size 0.2s;
+}
 
+.social-link:hover {
+  font-size: 3rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.year {
+  margin-bottom: 1rem;
+  font-size: 1.5;
+  color: #555;
+}
+/* end of sidebar */
+/* end of navbar */
