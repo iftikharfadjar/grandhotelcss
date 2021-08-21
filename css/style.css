@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* z-index: 10; */
+  z-index: 1;
 }
 
 .menu-icon {
@@ -43,7 +43,7 @@ body {
 .line-1,
 .line-3 {
   width: 1.8rem;
-  transition: width 0.16s;
+  transition: all 0.16s;
 }
 
 .menu-icon:hover .line {
@@ -79,8 +79,9 @@ body {
 /* end of sidebar */
 
 .navigation {
-  margin-left: 7rem;
+  /* margin-left: 7rem; */
   height: 100%;
+  left:-21rem;
   width: 28rem;
   position: fixed;
   display: flex;
@@ -96,6 +97,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
+	transition: left .5s;
 }
 
 .navigation-header {
@@ -214,5 +216,21 @@ body {
 	letter-spacing:.2rem;
 	font-size:.7rem;
 	margin-bottom:1.5rem;
+}
+
+.checkbox:checked ~ .navigation {
+	left:7rem;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+	transform:rotate(-405deg) translate(-5px,6px);
+}
+
+.checkbox:checked ~ .sidebar .line-2 {
+	opacity:0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+	transform:rotate(405deg) translate(-5px,-6px);
 }
 /* end of navbar */
