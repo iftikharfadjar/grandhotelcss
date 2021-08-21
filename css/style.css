@@ -2,6 +2,7 @@
 html {
   font-size: 62.5%; /* change font size 10/16 from default (16px) */
   box-sizing: border-box;
+	caret-color:transparent;
 }
 
 body {
@@ -135,6 +136,7 @@ body {
   color: #deaa86;
   border-radius: 10rem;
   transition: background-color 0.5s;
+	caret-color:#deaa86;
 }
 
 .navigation-search-input:focus {
