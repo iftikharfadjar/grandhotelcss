@@ -250,6 +250,7 @@ body {
 .brand{
 	display:flex;
 	cursor:pointer;
+	position:absolute;
 }
 
 .hotel-heading{
@@ -262,11 +263,12 @@ body {
 
 .banner{
 	color:#ddd;
-	height:65rem;
+	height:100vh;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
 	justify-content:center;
+	
 }
 
 .banner-heading{
@@ -276,6 +278,7 @@ body {
 	color:#deaa86;
 	letter-spacing.2rem;
 	margin-bottom:0;
+	margin-top:0;
 	animation: anim 2s;
 }
 
