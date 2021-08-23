@@ -226,6 +226,7 @@ body {
 
 .checkbox:checked ~ .sidebar .line-1 {
 	transform:rotate(-405deg) translate(-5px,6px);
+	/* width:2.5rem; */
 }
 
 .checkbox:checked ~ .sidebar .line-2 {
@@ -234,5 +235,94 @@ body {
 
 .checkbox:checked ~ .sidebar .line-3 {
 	transform:rotate(405deg) translate(-5px,-6px);
+	/* width:2.5rem; */
 }
 /* end of navbar */
+
+/* header */
+.header{
+	margin-left:7rem;
+	height:100vh;
+	background: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.4)),url('../img/header-1.jpeg') center no-repeat;
+	background-size: cover;
+}
+
+.brand{
+	display:flex;
+	cursor:pointer;
+}
+
+.hotel-heading{
+	font-family:'Josefin Sans', sans-serif;
+	font-size:2.7rem;
+	font-weight:400;
+	color:#deaa86;
+	letter-spacing.2rem;
+}
+
+.banner{
+	color:#ddd;
+	height:65rem;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+
+.banner-heading{
+	font-family:'Josefin Sans', sans-serif;
+	font-size:7rem;
+	font-weight:400;
+	color:#deaa86;
+	letter-spacing.2rem;
+	margin-bottom:0;
+	animation: anim 2s;
+}
+
+.banner-paragraph{
+	font-size:3.5rem;
+	font-weight:300;
+	animation:anim 1.5s .5s backwards;
+}
+
+.banner-button{
+	width:21rem;
+	padding: 1.2rem 2rem;
+	font-size:2rem;
+	color:#333;
+	letter-spacing:.1rem;
+	border: none;
+	border-radius:10rem;
+	/* background:linear-gradient(to right,gold,goldenrod); */
+	background: linear-gradient(90deg, var(--c1, #f6d365), var(--c2, #fda085) 51%, var(--c1, #f6d365)) var(--x, 0)/ 200%;
+	outline:none;
+	cursor:pointer;
+	animation:anim 1s 1s backwards;
+	transition: 1.5s;
+}
+
+.banner-button:hover{
+	/* background:linear-gradient(to left,gold,goldenrod); */
+	--x:100%;
+}
+
+.checkout-btn{
+	--c1: #f6d365;
+  --c2: #fda085;
+}
+
+.banner-button:active{
+	transform:translatey(.2rem)
+}
+
+@keyframes anim{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+
+/* end of header */
+
