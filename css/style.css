@@ -447,3 +447,9 @@ body {
 	transform: translate(-30%, -30%);
 }
 /* end about us */
+
+/* Rooms */
+.rooms{
+	margin-left:7rem;
+}
+/* End Rooms */
