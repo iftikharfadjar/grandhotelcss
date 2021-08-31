@@ -1,7 +1,10 @@
 import Head from 'next/head';
 import Sidebar from '../components/Sidebar';
+import NavigationBar from '../components/NavigationBar';
+import UseNavigationOpen from '../containers/UseNavigationOpen';
 
 export default function Home() {
+  const [openNavBar, handleOpenNavBar] = UseNavigationOpen();
   return (
     <div>
       <Head>
@@ -23,7 +26,8 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <Sidebar />
+      <Sidebar openNavbar={openNavBar} handleNavBar={handleOpenNavBar} />
+      <NavigationBar open={openNavBar} />
     </div>
   );
 }

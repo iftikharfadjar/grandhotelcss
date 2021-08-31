@@ -1,41 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Sidebar.module.css';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <div className={styles.sidebar}>
-      <div className={styles.menuicon}>
-        <div className={`${styles.line} ${styles.line1}`}></div>
-        <div className={styles.line}></div>
-        <div className={`${styles.line} ${styles.line3}`}></div>
-      </div>
+      <SidebarBtn
+        openNavbar={props.openNavbar}
+        handleNavBar={props.handleNavBar}
+      />
 
       <ul className={styles.socialIconsList}>
-        <li>
-          <a href="#" className={styles.socialLink}>
-            <i className="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" className={styles.socialLink}>
-            <i className="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" className={styles.socialLink}>
-            <i className="fab fa-google-plus-g"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" className={styles.socialLink}>
-            <i className="fab fa-instagram"></i>
-          </a>
-        </li>
+        <IconSidebar iconName="fab fa-facebook-f" />
+        <IconSidebar iconName="fab fa-twitter" />
+        <IconSidebar iconName="fab fa-google-plus-g" />
+        <IconSidebar iconName="fab fa-instagram" />
       </ul>
 
       <div className={styles.year}>
         <p>2021</p>
       </div>
+    </div>
+  );
+};
+
+const IconSidebar = (props) => {
+  return (
+    <React.Fragment>
+      <li>
+        <a href={props.url || '#'} className={styles.socialLink}>
+          <i className={props.iconName}></i>
+        </a>
+      </li>
+    </React.Fragment>
+  );
+};
+
+const SidebarBtn = (props) => {
+  return (
+    <div className={styles.menuicon} onClick={props.handleNavBar}>
+      <div
+        className={`${styles.line} ${styles.line1} ${
+          props.openNavbar && styles['line-1-open']
+        }`}
+      ></div>
+      <div
+        className={`${styles.line} ${
+          props.openNavbar && styles['line-2-open']
+        }`}
+      ></div>
+      <div
+        className={`${styles.line} ${styles.line3} ${
+          props.openNavbar && styles['line-3-open']
+        }`}
+      ></div>
     </div>
   );
 };

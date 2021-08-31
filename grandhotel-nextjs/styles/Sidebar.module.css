@@ -28,7 +28,19 @@
 .line1,
 .line3 {
   width: 1.8rem;
-  /* transition: all 0.16s; */
+  transition: all 0.3s;
+}
+
+.line-1-open {
+  transform: rotate(-405deg) translate(-12.5px, 6px);
+}
+
+.line-2-open {
+  opacity: 0;
+}
+
+.line-3-open {
+  transform: rotate(405deg) translate(-12.5px, -6px);
 }
 
 .menuicon:hover .line {
