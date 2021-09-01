@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar';
 import NavigationBar from '../components/NavigationBar';
 import UseNavigationOpen from '../containers/UseNavigationOpen';
 import Banner from '../components/Banner';
+import AboutUs from '../components/AboutUs';
 
 export default function Home() {
   const [openNavBar, handleOpenNavBar] = UseNavigationOpen();
@@ -31,6 +32,7 @@ export default function Home() {
       <NavigationBar open={openNavBar} />
       <div className="container">
         <Banner />
+        <AboutUs />
       </div>
     </div>
   );

@@ -1,15 +1,31 @@
 /* header */
 .header {
   height: 100vh;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
-    url('../public/img/header-1.jpeg') center no-repeat;
-  background-size: cover;
+
+  /* background: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.4)),url('../img/header-1.jpeg') center no-repeat;
+	background-size: cover;  */
+  position: relative;
+}
+
+.banner-image-wrapper:before {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
 }
 
 .brand {
   display: flex;
   cursor: pointer;
   position: absolute;
+  z-index: 3;
 }
 
 .hotel-heading {
@@ -21,6 +37,7 @@
 }
 
 .banner {
+  /* position: relative; */
   color: #ddd;
   height: 100vh;
   display: flex;
@@ -65,7 +82,7 @@
   outline: none;
   cursor: pointer;
   animation: anim 1s 1s backwards;
-  transition: 0.8s;
+  transition: 1.5s;
 }
 
 .banner-button:hover {

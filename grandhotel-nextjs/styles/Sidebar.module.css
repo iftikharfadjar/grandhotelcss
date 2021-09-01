@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menuicon {
@@ -32,7 +32,7 @@
 }
 
 .line-1-open {
-  transform: rotate(-405deg) translate(-12.5px, 6px);
+  transform: rotate(-405deg) translate(-5px, 6px);
 }
 
 .line-2-open {
@@ -40,7 +40,7 @@
 }
 
 .line-3-open {
-  transform: rotate(405deg) translate(-12.5px, -6px);
+  transform: rotate(405deg) translate(-5px, -6px);
 }
 
 .menuicon:hover .line {
