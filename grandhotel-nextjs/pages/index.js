@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Sidebar from '../components/Sidebar';
 import NavigationBar from '../components/NavigationBar';
 import UseNavigationOpen from '../containers/UseNavigationOpen';
+import Banner from '../components/Banner';
 
 export default function Home() {
   const [openNavBar, handleOpenNavBar] = UseNavigationOpen();
@@ -28,6 +29,9 @@ export default function Home() {
       </Head>
       <Sidebar openNavbar={openNavBar} handleNavBar={handleOpenNavBar} />
       <NavigationBar open={openNavBar} />
+      <div className="container">
+        <Banner />
+      </div>
     </div>
   );
 }
