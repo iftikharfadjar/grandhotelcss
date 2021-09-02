@@ -23,6 +23,7 @@
   font-weight: 300;
   text-transform: uppercase;
   color: #555;
+  transition: 1.5s;
 }
 
 .small-underline {
@@ -45,6 +46,7 @@
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: #b85d1c;
+  transition: 1.5s;
 }
 
 .about-us-paragraph {
@@ -53,6 +55,7 @@
   font-weight: 300;
   text-align: center;
   margin-bottom: 5rem;
+  transition: 1.5s;
 }
 
 .about-us-btn {
@@ -66,6 +69,7 @@
   cursor: pointer;
   border: 0.1rem solid #b85d1c;
   color: #b85d1c;
+  transition: 1.5s;
 }
 
 .btn-arrow {
@@ -91,6 +95,7 @@
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
   border: 0.2rem solid #b85d1c;
   border-radius: 0.4rem;
+  transition: 1.5s;
 }
 
 .image-1 {
@@ -117,5 +122,39 @@
 
   .about-us-content {
     margin-bottom: 13rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .image {
+    width: 20rem;
+    height: 14rem;
+  }
+
+  .about-us-heading {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .about-us-sub-heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .about-us-paragraph {
+    font-size: 1rem;
+  }
+
+  .about-us-btn {
+    width: 12rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .image {
+    width: 16rem;
+    height: 10rem;
   }
 }

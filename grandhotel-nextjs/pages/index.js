@@ -32,7 +32,7 @@ export default function Home() {
       <NavigationBar open={openNavBar} />
       <div className="container">
         <Banner />
-        {/* <AboutUs /> */}
+        <AboutUs />
       </div>
     </div>
   );
