@@ -80,24 +80,21 @@
 .about-us-images {
   flex: 1 1;
   position: relative;
-  background-color: red;
-  width: 100%;
-  height: 100%;
 }
 
 .image {
   position: absolute;
   width: 32rem;
   height: 20rem;
-  top: 0;
-  left: 0%;
+  top: 50%;
+  left: 50%;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
   border: 0.2rem solid #b85d1c;
   border-radius: 0.4rem;
 }
 
 .image-1 {
-  /* transform: translate(-20%, -90%); */
+  transform: translate(-20%, -90%);
 }
 
 .image-2 {
@@ -110,4 +107,15 @@
 
 .image-4 {
   transform: translate(-30%, -30%);
+}
+
+@media (max-width: 1200px) {
+  .about-us {
+    flex-direction: column;
+    padding-bottom: 20rem;
+  }
+
+  .about-us-content {
+    margin-bottom: 13rem;
+  }
 }

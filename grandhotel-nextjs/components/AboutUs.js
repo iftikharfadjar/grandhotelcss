@@ -1,7 +1,10 @@
 import React from 'react';
 import * as s from '../styles/Aboutus.module.css';
 import Image from 'next/image';
-// import Image1 from '../public/img/about-us-img-1.jpeg'
+import Image1 from '../public/img/about-us-img-1.jpeg';
+import Image2 from '../public/img/about-us-img-2.jpeg';
+import Image3 from '../public/img/about-us-img-3.jpeg';
+import Image4 from '../public/img/about-us-img-4.jpeg';
 
 const AboutUs = () => {
   return (
@@ -31,8 +34,11 @@ const AboutUs = () => {
           <i className={`fas fa-angle-double-right ${s['btn-arrow']}`}></i>
         </button>
       </div>
-      <div className={`${['about-us-images']}`}>
-        <ImageAboutUs url="/img/about-us-img-1.jpeg" />
+      <div className={`${s['about-us-images']}`}>
+        <ImageAboutUs url={Image1} style="image-1" />
+        <ImageAboutUs url={Image2} style="image-2" />
+        <ImageAboutUs url={Image3} style="image-3" />
+        <ImageAboutUs url={Image4} style="image-4" />
       </div>
     </section>
   );
@@ -40,8 +46,8 @@ const AboutUs = () => {
 
 const ImageAboutUs = (props) => {
   return (
-    <div className={s['image']}>
-      <Image src={props.url} layout="fill" className={`${s['image-1']}`} />
+    <div className={`${s['image']} ${s[props.style]}`}>
+      <Image src={props.url} layout="fill" objectFit="fill" />
     </div>
   );
 };
