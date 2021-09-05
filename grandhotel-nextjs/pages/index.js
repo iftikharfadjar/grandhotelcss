@@ -6,6 +6,7 @@ import Banner from '../components/Banner';
 import AboutUs from '../components/AboutUs';
 import Rooms from '../components/Rooms';
 import Customer from '../components/Customer';
+import FooterPage from '../components/FooterPage';
 
 export default function Home() {
   const [openNavBar, handleOpenNavBar] = UseNavigationOpen();
@@ -37,6 +38,7 @@ export default function Home() {
         <AboutUs />
         <Rooms />
         <Customer />
+        <FooterPage />
       </div>
     </div>
   );
