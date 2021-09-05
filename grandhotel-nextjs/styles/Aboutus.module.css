@@ -158,3 +158,10 @@
     height: 10rem;
   }
 }
+
+@media (max-width: 300px) {
+  .image {
+    width: 10rem;
+    height: 6rem;
+  }
+}

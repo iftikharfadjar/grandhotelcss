@@ -4,6 +4,7 @@ import NavigationBar from '../components/NavigationBar';
 import UseNavigationOpen from '../containers/UseNavigationOpen';
 import Banner from '../components/Banner';
 import AboutUs from '../components/AboutUs';
+import Rooms from '../components/Rooms';
 
 export default function Home() {
   const [openNavBar, handleOpenNavBar] = UseNavigationOpen();
@@ -33,6 +34,7 @@ export default function Home() {
       <div className="container">
         <Banner />
         <AboutUs />
+        <Rooms />
       </div>
     </div>
   );
