@@ -6,7 +6,7 @@ const FooterPage = () => {
   return (
     <footer className={`${s['footer']}`}>
       <div className={`${s['main-part']}`}>
-        {/* <FooterListWrapper header="Grand Hotel">
+        <FooterListWrapper header="Grand Hotel">
           <FooterList item="support@grandhotel.com" />
           <FooterList item="new york, Main street 123" />
           <FooterList item="tel: +123 456 789" />
@@ -21,11 +21,9 @@ const FooterPage = () => {
           <FooterList item="Contact" />
         </FooterListWrapper>
 
-        <InputForm /> */}
+        <InputForm />
 
-        <ImageFooter url="/img/gallery-img-1.jpeg" />
-        {/* <Image src="/img/customer-1.jpeg" width={800} height={400} /> */}
-        {/* <GalleryFooter /> */}
+        <GalleryFooter />
       </div>
 
       <div className={`${s['creator-part']}`}>
@@ -50,7 +48,7 @@ const FooterPage = () => {
 const ImageFooter = (props) => {
   return (
     <div className={`${s['image-wrapper']}`}>
-      <Image src={props.url} layout="fill" />
+      <Image src={props.url} layout="fill" className={`${s['footer-image']}`} />
     </div>
   );
 };

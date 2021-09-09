@@ -1,3 +1,7 @@
+/* .footer {
+  position: relative;
+} */
+
 .main-part {
   display: flex;
   justify-content: space-between;
@@ -10,6 +14,7 @@
   font-weight: 300;
   color: goldenrod;
   margin: 1rem 0 3rem 0;
+  transition: 1.5;
 }
 
 .footer-list {
@@ -58,8 +63,9 @@
 
 .image-wrapper {
   width: 12rem;
-  height: 12rem;
+  height: 8rem;
   margin: 0.4rem;
+  position: relative;
   /*overflow: hidden;  scallingnya didalam border box */
 }
 
@@ -73,6 +79,7 @@
 .gallery-images {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .footer-image:hover {
@@ -106,4 +113,63 @@
 
 .text-right span {
   color: gold;
+}
+
+@media (max-width: 1400px) {
+  .main-part {
+    flex-direction: column;
+    /* align-items:flex-end; */
+  }
+
+  .footer-list {
+    display: flex;
+  }
+
+  .footer-list-items {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer-list {
+    display: block;
+  }
+
+  .creator-part {
+    flex-direction: column;
+  }
+
+  .copyright-text {
+    order: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-list {
+    margin-left: 0;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .footer-input {
+    width: 10rem;
+  }
+
+  .image-wrapper {
+    width: 9rem;
+  }
+
+  .text-right {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .text-right i {
+    font-size: 1.5rem;
+  }
+
+  .copyright-text {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
